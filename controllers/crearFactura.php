@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    require_once 'databases/conexionDBcontroller.php';
+    require_once 'databases/conexionDbController.php';
 
     $numero_referencia = $_POST['numero_referencia'] ?? '';
     $fecha_compra = $_POST['fecha_compra'] ?? '';

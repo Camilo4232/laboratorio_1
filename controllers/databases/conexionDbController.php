@@ -3,7 +3,7 @@ namespace App\controllers\databases;
 
 use mysqli;
 
-class ConexionDBController{
+class conexionDbController{
     protected $host = 'localhost';
     protected $user = 'root';
     protected $pwd = '';

@@ -1,8 +1,8 @@
 <?php
 
-include_once 'databases/ConexionDBController.php';
+include_once 'databases/conexionDbController.php';
 
-$conexionDBController = new \App\controllers\databases\ConexionDBController();
+$conexionDBController = new \App\controllers\databases\conexionDbController();
 
 $sql = "SELECT * FROM articulos";
 

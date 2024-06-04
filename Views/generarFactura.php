@@ -1,5 +1,5 @@
 <?php
-include_once '../controller/databases/ConexionDBController.php';
+include_once '../controller/databases/conexionDbController.php';
 
 $nombre = $_GET['nombre'] ?? '';
 $tipo_documento = $_GET['tipo_documento'] ?? '';
@@ -10,7 +10,7 @@ $productos = $_GET['productos'] ?? [];
 $descuento = $_GET['descuento'] ?? '';
 $total_con_descuento = $_GET['total_con_descuento'] ?? '';
 
-$conexionDBController = new \App\controllers\databases\ConexionDBController();
+$conexionDBController = new \App\controllers\databases\conexionDbController();
 
 $sql_cliente = "SELECT id FROM clientes WHERE numeroDocumento = '$numero_documento'";
 $resultado = $conexionDBController->execSql($sql_cliente);
@@ -110,7 +110,7 @@ $cliente = [
             <input type="hidden" name="total_con_descuento" value="<?php echo htmlspecialchars($total_con_descuento); ?>">
             <button type="submit">Guardar Factura</button>
         </form>
-        <a href="consultar_facturas.php">Consultar Facturas</a>
+        <a href="consultarFacturas.php">Consultar Facturas</a>
     </div>
 </body>
 </html>

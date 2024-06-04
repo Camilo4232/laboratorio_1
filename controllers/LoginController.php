@@ -1,9 +1,9 @@
 <?php
 namespace App\controllers;
 
-include_once 'databases/ConexionDBController.php';
+include_once 'databases/conexionDbController.php';
 
-use App\controllers\databases\ConexionDBController;
+use App\controllers\databases\conexionDbController;
 
 session_start();
 
@@ -21,12 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($resultado && $resultado->num_rows == 1) {
         $_SESSION["usuario"] = $usuario;
-        header("Location: ../Views/informacion_cliente.php");
+        header("Location: ../Views/informacionCliente.php");
         exit();
     } else {
         $_SESSION["error_message"] = "Usuario o contraseña incorrectos";
-        header("Location: ../Views/inicio_sesion.html");
+        header("Location: ../Views/inicioSesion.html");
         exit();
     }
 }
+
 

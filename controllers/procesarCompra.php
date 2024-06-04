@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once 'databases/ConexionDBController.php';
-    $conexionDBController = new \App\controllers\databases\ConexionDBController();
+    include_once 'databases/conexionDbController.php';
+    $conexionDBController = new \App\controllers\databases\conexionDbController();
 
     $nombreCompleto = $_POST['nombreCompleto'];
     $tipoDocumento = $_POST['tipoDocumento'];
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
     $productos_info = http_build_query(array('productos' => $productos));
 
-    header("Location: ../Views/generar_factura.php?" . http_build_query($cliente_info) . "&" . $productos_info . "&descuento=$descuento&total_con_descuento=$total_con_descuento");
+    header("Location: ../Views/generarFactura.php?" . http_build_query($cliente_info) . "&" . $productos_info . "&descuento=$descuento&total_con_descuento=$total_con_descuento");
     exit();
 }
 

@@ -1,8 +1,8 @@
 <?php
 
-include_once '../controller/databases/ConexionDBController.php';
+include_once '../controller/databases/conexionDbController.php';
 
-$conexionDBController = new \App\controllers\databases\ConexionDBController();
+$conexionDBController = new \App\controllers\databases\conexionDbController();
 
 if ($conexionDBController) {
     function obtenerClientes($conexion) {
@@ -26,13 +26,13 @@ if ($conexionDBController) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lista de Clientes</title>
-        <link rel="stylesheet" href="CSS/estilos.css">
+        <link rel="stylesheet" href="../Views/CSS/estilos.css">
     </head>
     <body>
     <h1>Lista de Clientes</h1>
     <ul>
         <?php foreach ($clientes as $cliente): ?>
-            <li><a href="consultar_facturas.php?id_cliente=<?= $cliente['id'] ?>"><?= $cliente['nombre'] ?></a></li>
+            <li><a href="consultarFacturas.php?id_cliente=<?= $cliente['id'] ?>"><?= $cliente['nombre'] ?></a></li>
         <?php endforeach; ?>
     </ul>
     </body>

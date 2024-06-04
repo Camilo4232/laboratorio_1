@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once 'databases/ConexionDBController.php';
-    $conexionDBController = new \App\controllers\databases\ConexionDBController();
+    include_once 'databases/conexionDbController.php';
+    $conexionDBController = new \App\controllers\databases\conexionDbController();
 
     $nombreCompleto = $_POST['nombreCompleto'];
     $tipoDocumento = $_POST['tipoDocumento'];
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'email' => $email
     );
 
-    header("Location: ../Views/seleccion_productos.php?" . http_build_query($cliente_info));
+    header("Location: ../Views/seleccionProductos.php?" . http_build_query($cliente_info));
     exit();
 }
 

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selección de Productos</title>
-    <link rel="stylesheet" href="../Views/CSS/seleccion_productos.css">
+    <link rel="stylesheet" href="../Views/CSS/seleccionProductos.css">
 </head>
 <body>
     <h2>Selección de Productos</h2>
-    <form action="../controller/procesar_compra.php" method="POST">
+    <form action="../controllers/procesarCompra.php" method="POST">
         <?php
         $nombreCompleto = htmlspecialchars($_GET['nombreCompleto'] ?? '');
         $tipoDocumento = htmlspecialchars($_GET['tipoDocumento'] ?? '');
@@ -24,7 +24,7 @@
 
         <h3>Productos</h3>
         <?php
-        $productos = include '../controller/productos_disponibles.php';
+        $productos = include '../controller/productosDisponibles.php';
 
         if (!empty($productos)) {
             foreach ($productos as $producto) {

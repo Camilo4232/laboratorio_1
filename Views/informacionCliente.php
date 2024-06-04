@@ -12,7 +12,7 @@
     </header>
     <main>
         <section class="form-container">
-            <form action="../controller/procesar_cliente.php" method="POST">
+            <form action="../controller/procesarCliente.php" method="POST">
                 <div class="form-group">
                     <label for="nombreCompleto">Nombre Completo:</label>
                     <input type="text" id="nombreCompleto" name="nombreCompleto" required>

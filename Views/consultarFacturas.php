@@ -1,8 +1,8 @@
 <?php
 
-include_once '../controller/databases/ConexionDBController.php';
+include_once '../controller/databases/conexionDbController.php';
 
-$conexionDBController = new \App\controllers\databases\ConexionDBController();
+$conexionDBController = new \App\controllers\databases\conexionDbController();
 
 if (!isset($_GET['id_cliente'])) {
     echo "Error: El parámetro id_cliente no está definido.";
@@ -68,7 +68,7 @@ if ($conexionDBController) {
         <?php
         $fechas_facturacion_cliente = obtenerFechasFacturacionCliente($id_cliente, $conexionDBController);
         foreach ($fechas_facturacion_cliente as $fecha) {
-            echo "<li><a href=\"consultar_facturas.php?id_cliente={$id_cliente}&fecha={$fecha}\">{$fecha}</a></li>";
+            echo "<li><a href=\"consultarFacturas.php?id_cliente={$id_cliente}&fecha={$fecha}\">{$fecha}</a></li>";
         }
         ?>
     </ul>
